@@ -27,7 +27,6 @@ import kotlinx.coroutines.launch
 fun PantallaRegistro(navController: NavController) {
     val scope = rememberCoroutineScope()
 
-    // Estados locales para campos del formulario
     var nombre by remember { mutableStateOf("") }
     var apellidoPaterno by remember { mutableStateOf("") }
     var apellidoMaterno by remember { mutableStateOf("") }

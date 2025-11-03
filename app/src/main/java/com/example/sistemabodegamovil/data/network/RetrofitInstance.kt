@@ -11,12 +11,10 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitInstance {
 
-    // Si usas ADB reverse, manten esto
     private const val BASE_URL = "http://127.0.0.1:8080/"
 
     private val json = Json { ignoreUnknownKeys = true }
 
-    // Cliente HTTP con timeouts ampliados
     private val client = OkHttpClient.Builder()
         .connectTimeout(20, TimeUnit.SECONDS)
         .readTimeout(20, TimeUnit.SECONDS)

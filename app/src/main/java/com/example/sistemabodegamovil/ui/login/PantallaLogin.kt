@@ -47,7 +47,6 @@ fun PantallaLogin(navController: NavController) {
             modifier = Modifier.fillMaxSize()
         )
 
-        // Botón volver
         IconButton(
             onClick = { navController.popBackStack() },
             modifier = Modifier.padding(16.dp).align(Alignment.TopStart)
@@ -59,7 +58,6 @@ fun PantallaLogin(navController: NavController) {
             )
         }
 
-        // Tarjeta blanca inferior
         Box(
             modifier = Modifier
                 .fillMaxWidth()

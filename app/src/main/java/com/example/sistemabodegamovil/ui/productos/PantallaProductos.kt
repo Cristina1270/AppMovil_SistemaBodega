@@ -34,7 +34,6 @@ fun PantallaProductos(
 ) {
     val productos = vm.productos.collectAsState().value
 
-    // Estados locales para los campos
     var nombre by remember { mutableStateOf("") }
     var codigo by remember { mutableStateOf("") }
     var precioText by remember { mutableStateOf("") }

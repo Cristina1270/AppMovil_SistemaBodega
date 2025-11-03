@@ -30,7 +30,7 @@ fun PantallaHome(
     navController: NavController,
     vm: ProductoViewModel = viewModel()
 ) {
-    val productos = vm.productos.collectAsState().value //LEE LOS PRODUCTOS DE ROOM
+    val productos = vm.productos.collectAsState().value
 
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -68,7 +68,6 @@ fun PantallaHome(
                 .padding(24.dp)
         ) {
 
-            //TOP BAR
             Row(
                 Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -106,7 +105,6 @@ fun PantallaHome(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            //PRODUCTOS
             Text("Productos", color = Color.White, fontSize = 18.sp)
             Spacer(Modifier.height(12.dp))
 
