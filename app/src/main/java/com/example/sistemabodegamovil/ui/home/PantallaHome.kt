@@ -28,7 +28,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun PantallaHome(
     navController: NavController,
-    userName: String = "Cristina",
     vm: ProductoViewModel = viewModel()
 ) {
     val productos = vm.productos.collectAsState().value //LEE LOS PRODUCTOS DE ROOM
@@ -95,12 +94,12 @@ fun PantallaHome(
             Spacer(modifier = Modifier.height(24.dp))
 
             Text(
-                text = "Hola, $userName 👋",
+                text = "Bienvendido/a",
                 style = MaterialTheme.typography.headlineSmall,
                 color = Color.White
             )
             Text(
-                text = "Que tengas un buen día ✨",
+                text = "¡Tu gestión comienza aquí!",
                 color = Color(0xFFBBDEFB),
                 fontSize = 14.sp
             )
@@ -112,7 +111,7 @@ fun PantallaHome(
             Spacer(Modifier.height(12.dp))
 
             LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                items(productos) { producto ->   // ✅ AHORA VIENEN DE ROOM
+                items(productos) { producto ->
                     Card(
                         modifier = Modifier
                             .width(180.dp)
@@ -134,12 +133,12 @@ fun PantallaHome(
                             )
                             Column {
                                 Text(
-                                    text = producto.nombre,    // ✅ NOMBRE
+                                    text = producto.nombre,
                                     color = Color.White,
                                     fontSize = 16.sp
                                 )
                                 Text(
-                                    text = "Código: ${producto.codigo}", // ✅ CÓDIGO
+                                    text = "Código: ${producto.codigo}",
                                     color = Color.White.copy(alpha = .7f),
                                     fontSize = 12.sp
                                 )

@@ -11,7 +11,8 @@ import kotlinx.coroutines.flow.asStateFlow
 data class AuthUiState(
     val loading: Boolean = false,
     val success: Boolean = false,
-    val error: String? = null
+    val error: String? = null,
+    val nombre: String? = null
 )
 
 class AuthViewModel : ViewModel() {
@@ -26,7 +27,7 @@ class AuthViewModel : ViewModel() {
                 _ui.value = AuthUiState(success = true)
                 println("Usuario autenticado: ${res.usuarioDTO}")
             } catch (e: Exception) {
-                _ui.value = AuthUiState(error = e.message)
+                _ui.value = AuthUiState(error = "Usuario no encontrado")
             }
         }
     }
