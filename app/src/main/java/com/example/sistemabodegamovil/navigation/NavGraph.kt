@@ -16,10 +16,11 @@ fun MyApp() {
     androidx.compose.material3.Text("Cargando NavHost...")
 
     NavHost(navController = navController, startDestination = "welcome") {
-        composable("welcome") { com.example.sistemabodegamovil.ui.welcome.PantallaWelcome(navController) }
-        composable("registro") { com.example.sistemabodegamovil.ui.registro.PantallaRegistro(navController) }
-        composable("login")   { com.example.sistemabodegamovil.ui.login.PantallaLogin(navController) }
-        composable("home")    { com.example.sistemabodegamovil.ui.home.PantallaHome(navController) }
+        composable("welcome")     { com.example.sistemabodegamovil.ui.welcome.PantallaWelcome(navController) }
+        composable("registro")    { com.example.sistemabodegamovil.ui.registro.PantallaRegistro(navController) }
+        composable("login")       { com.example.sistemabodegamovil.ui.login.PantallaLogin(navController) }
+        composable("home")        { com.example.sistemabodegamovil.ui.home.PantallaHome(navController) }
+        composable("productos")   { com.example.sistemabodegamovil.ui.productos.PantallaProductos(navController) }
 
     }
 }
